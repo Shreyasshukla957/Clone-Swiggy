@@ -5,13 +5,13 @@ import ReactDOM from "react-dom/client";
 
 export default function Header() {
   return (
-    <header className="bg-[#ff5200] font-serif ">
+    <header className="bg-[#ff5200] font-roboto overflow-auto scrollbar-hide">
       <div className="flex justify-between container mx-auto">
         <div className="w-40 h-12 py-8">
           <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"></img>
         </div>
 
-        <div className="text-white font-serif font-bold py-8 flex gap-7 items-center">
+        <div className="text-white font-roboto font-bold py-8 flex gap-7 items-center shrink-[-3]">
           <a href="https://www.swiggy.com/corporate/" target="_blank">
             Swiggy Corporate
           </a>
@@ -26,7 +26,7 @@ export default function Header() {
             Get the App
           </a>
           <div className="bg-black py-3 px-7 rounded-xl">
-            <a href="https://www.swiggy.com/corporate/" target="_blank">
+            <a href="https://www.swiggy.com/corporate/" target="_blank ">
               Sign in
             </a>
           </div>
@@ -69,7 +69,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="max-w-[100vw] flex items-center justify-center relative bottom-30">
+      <div className="max-w-full flex items-center justify-center ">
         
         <div className="flex max-w-[80%] ">
 

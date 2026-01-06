@@ -5,11 +5,12 @@ import ReactDOM from "react-dom/client";
 export default function FoodOption() {
   return (
     <>
-      <div className="flex flex-col items-center mt-10">
-        <div className="w-[80vw] h-[47vh] container mx-auto flex  flex-wrap ">
+      <div className="flex flex-col items-center mt-10 ">
           <div className="w-[80vw] h-[5vh] mt-20 flex items-center justify-start font-bold text-2xl">
             Order our best food Options
           </div>
+        <div className="container mx-auto flex overflow-x-scroll scrollbar-hide">
+        
           {imageGridCards.map((value) => {
             return (
               <div key={value.id}>
