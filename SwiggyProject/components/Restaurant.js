@@ -11,7 +11,7 @@ export default function Restaurant() {
             <div className=" flex my-5 font-bold text-2xl w-[80vw]">
 
               <h1 className="justify-center items-start">
-                 Discover best restaurants on Dineout
+                 Discover best restaurants on Dineout 
                 </h1> 
 
             </div>
