@@ -36,17 +36,16 @@ export default function Delivery() {
     }
   }, []);
 
-    if(apidata.length===0){
-        return<h1>Data is Loading</h1>
-    }
+  if (apidata.length === 0) {
+    return <h1>Data is Loading</h1>;
+  }
 
   return (
     <>
       <div className="min-h-screen w-screen bg-neutral-50 ">
         <div className="mt-50"></div>
         <div className="container flex flex-wrap mx-auto h-auto w-screen gap-4  justify-center p-5 pt-2">
-          {
-          apidata.map((value) => {
+          {apidata.map((value) => {
             console.log(value);
             return (
               <div className="" key={value.info.id}>

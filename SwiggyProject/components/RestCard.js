@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Link } from "react-router";
 
 export default function RestCard({ value }) {
   return (
     <>
-      <div className="h-60 w-68 transition-all hover:scale-90 duration-300 cursor-pointer">
+
+    <Link to={`/city/mumbai/`+value?.info?.id}>
+      <div className="h-60 w-68 transition-all hover:scale-90 duration-300 cursor-pointer border-none outline-none ">
         <img
           className="h-35 w-[90%] object-cover rounded-2xl  "
           src={
@@ -38,6 +41,7 @@ export default function RestCard({ value }) {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 }
