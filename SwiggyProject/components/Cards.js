@@ -6,7 +6,7 @@ export default function Cards(props) {
   // console.log(props);
   return (
     <>
-      <div className="w-85 shrink-0 h-100 ">
+      <div className="w-85 shrink-0 h-100 font-roboto">
 
         <div className="relative">
           <a href={props.data.cta.link} target="_blank">

@@ -1,10 +1,14 @@
 export default function ItemCards({ valueinfo }) {
   return (
     <>
-      <div className="flex items-top w-[78vw] h-40 ">
+      <div className="flex items-top w-[78vw] h-40 font-roboto">
         <div className="w-[90%] flex flex-col mr-2 mt-1 ">
           <div className=" ">{valueinfo.name}</div>
-          <div className="mt-1">{valueinfo.price ? `₹${valueinfo.price / 100}` : `₹${valueinfo.defaultPrice / 100}`}</div>
+          <div className="mt-1">
+            {valueinfo.price
+              ? `₹${valueinfo.price / 100}`
+              : `₹${valueinfo.defaultPrice / 100}`}
+          </div>
           <div className="mt-1 ml-1  flex items-center text-[12px]  text-green-900 font-bold">
             <svg
               width="12"
@@ -20,18 +24,20 @@ export default function ItemCards({ valueinfo }) {
             </svg>
 
             {valueinfo?.ratings?.aggregatedRating?.rating}
-            <div className="ml-1 font-black"> {`(${valueinfo?.ratings?.aggregatedRating?.ratingCountV2})`}</div>
+            <div className="ml-1 font-black">
+              {" "}
+              {`(${valueinfo?.ratings?.aggregatedRating?.ratingCountV2})`}
+            </div>
           </div>
-          
         </div>
 
         <div className="w-auto flex  justify-end relative items-top ">
-         <div className="">
-           <img 
-            className="h-35 w-40 rounded-2xl object-cover"
-            src={`https://media-assets.swiggy.com/swiggy/image/upload/${valueinfo.imageId}`}
-          ></img>
-         </div>
+          <div className="">
+            <img
+              className="h-35 w-40 rounded-2xl object-cover"
+              src={`https://media-assets.swiggy.com/swiggy/image/upload/${valueinfo.imageId}`}
+            ></img>
+          </div>
           <button className="absolute bottom-[-2] left-1/2 -translate-x-1/2 h-10 w-25 border border-green-200 bg-white rounded-xl text-green-700 font-bold shadow-sm hover:shadow-md transition-shadow">
             ADD
           </button>

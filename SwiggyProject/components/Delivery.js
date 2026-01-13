@@ -42,7 +42,7 @@ export default function Delivery() {
 
   return (
     <>
-      <div className="min-h-screen w-screen bg-neutral-50 ">
+      <div className="min-h-screen w-screen bg-neutral-50 font-roboto ">
         <div className="mt-50"></div>
         <div className="container flex flex-wrap mx-auto h-auto w-screen gap-4  justify-center p-5 pt-2">
           {apidata.map((value) => {

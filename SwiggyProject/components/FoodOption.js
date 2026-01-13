@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 export default function FoodOption() {
   return (
     <>
-      <div className="flex flex-col items-center mt-10 ">
+      <div className="flex flex-col items-center mt-10 font-roboto">
           <div className="w-[80vw] h-[5vh] mt-20 flex items-center justify-start font-bold text-2xl">
             Order our best food Options
           </div>

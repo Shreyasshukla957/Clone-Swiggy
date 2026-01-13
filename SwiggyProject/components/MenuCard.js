@@ -143,7 +143,7 @@ export default function MenuCard({ value, count, redcount }) {
 
   return (
     <>
-      <div className="flex-col flex items-center  mt-4">
+      <div className="flex-col flex items-center  mt-4 font-roboto">
         <div className="border-6 border-neutral-200 w-[80vw] mb-4 rounded-xl"></div>
         <div className=" w-[79vw] mb-6 font-bold flex justify-between ">
           <div> {value.title} </div>

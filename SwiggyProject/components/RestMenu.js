@@ -2,8 +2,6 @@ import MenuCard from "./MenuCard";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router";
-import ButtonVeg from "./buttonveg";
-import Button from "../../../Tailwind/class2/Components/button";
 
 export default function RestMenu() {
   let { id } = useParams();
@@ -32,12 +30,12 @@ export default function RestMenu() {
 
   return (
     <>
-      <div className="h-screen w-screen bg-white flex flex-col gap-y-30">
+      <div className="h-screen w-screen bg-white flex flex-col gap-y-30 font-roboto">
         <div className="h-10 w-full"></div>
 
         <div className="h-30 w-full  flex  justify-center items-center ">
-          <div className="flex h-full w-[80%]  items-center py-3 px-8 gap-x-4 bg-neutral-200 rounded-2xl shadow-aceternity">
-            <div className="flex h-10 w-20  items-center justify-start rounded-xl bg-neutral-100 hover:shadow-xl">
+          <div className="flex h-full w-[80%]  items-center py-3 px-8 gap-x-4 bg-neutral-50 rounded-2xl shadow-aceternity">
+            <div className="flex h-10 w-20  items-center justify-start rounded-xl bg-neutral-50 shadow-xl">
               <div
                 className={`ml-3 h-5 w-5 cursor-pointer rounded-md bg-green-400 transition-all ${
                   count
@@ -51,7 +49,7 @@ export default function RestMenu() {
               ></div>
             </div>
 
-            <div className="flex h-10 w-20 items-center justify-start rounded-xl bg-neutral-100 hover:shadow-xl">
+            <div className="flex h-10 w-20 items-center justify-start rounded-xl bg-neutral-50 shadow-xl">
               <div
                 className={`ml-3 h-5 w-5 cursor-pointer rounded-md bg-red-400 transition-all ${
                   redcount
@@ -67,28 +65,29 @@ export default function RestMenu() {
           </div>
         </div>
 
-         <Link to={`/city/mumbai/${id}/search`}>
-        <div className="h-15 w-full flex justify-center items-center bg-neutrala-300">
-          <div className="flex h-full w-[70%]  items-center justify-start py-3 px-8 gap-x-4 bg-neutral-200 rounded-2xl shadow-aceternity outline-none">
-           
-            <button  className=" h-full w-[90%] outline-none cursor-pointer">Search Items </button>
-            <svg
-              className="h-full cursor-pointer text-sky-800 "
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
+        <Link to={`/city/mumbai/${id}/search`}>
+          <div className="h-15 w-full flex justify-center items-center bg-neutrala-300">
+            <div className="flex h-full w-[70%]  items-center justify-start py-3 px-8 gap-x-4  rounded-2xl   outline-none border-orange-600 shadow-sm hover:shadow-orange-500/50 ">
+              <button className=" h-full w-[90%] outline-none cursor-pointer text-orange-600 font-inter font-medium ">
+                Search Items{" "}
+              </button>
+              <svg
+                className="h-full cursor-pointer text-orange-600 "
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </div>
           </div>
-        </div>
         </Link>
 
         <div className="flex flex-col ">

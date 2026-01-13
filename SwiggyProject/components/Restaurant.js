@@ -6,7 +6,7 @@ import Cards from "./Cards";
 export default function Restaurant() {
     return(
         <>
-            <div className="h-150 w-full flex flex-col mx-auto mt-8 justify-center items-center"> 
+            <div className="h-150 w-full flex flex-col mx-auto mt-8 justify-center items-center font-roboto"> 
 
             <div className=" flex my-5 font-bold text-2xl w-[80vw]">
 
