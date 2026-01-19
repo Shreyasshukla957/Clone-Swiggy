@@ -1,4 +1,29 @@
+import {  useReducer, useState } from "react";
+import { IncrementItems, DecrementItems, AddItems } from "../stores/cartslice";
+import { useDispatch } from "react-redux";
+
+
 export default function ItemCards({ valueinfo }) {
+  const [count, setcount] = useState(0);
+
+  const dispatch = useDispatch();
+  
+
+  function handleAddItems() {
+    setcount(1);
+    dispatch(AddItems(valueinfo));
+  }
+
+  function handleIncrementItems() {
+    setcount(count + 1);
+    dispatch(IncrementItems(valueinfo));
+  }
+
+  function handleDecrementItems() {
+    setcount(count - 1);
+    dispatch(DecrementItems(valueinfo));
+  }
+
   return (
     <>
       <div className="flex items-top w-[78vw] h-40 font-roboto">
@@ -38,9 +63,17 @@ export default function ItemCards({ valueinfo }) {
               src={`https://media-assets.swiggy.com/swiggy/image/upload/${valueinfo.imageId}`}
             ></img>
           </div>
-          <button className="absolute bottom-[-2] left-1/2 -translate-x-1/2 h-10 w-25 border border-green-200 bg-white rounded-xl text-green-700 font-bold shadow-sm hover:shadow-md transition-shadow">
-            ADD
-          </button>
+          <p className="absolute bottom-[-2] left-1/2 -translate-x-1/2 h-10 w-25 border border-green-200 bg-white rounded-xl text-green-700 font-bold shadow-sm hover:shadow-md transition-shadow flex items-center justify-around cursor-pointer  select-none">
+            {count === 0 ? (
+              <span onClick={handleAddItems}>ADD</span>
+            ) : (
+              <span className="flex items-center justify-between w-full px-4">
+                <span onClick={handleIncrementItems}>+</span>
+                <span>{count}</span>
+                <span onClick={handleDecrementItems}>−</span>
+              </span>
+            )}
+          </p>
         </div>
       </div>
 
@@ -48,3 +81,6 @@ export default function ItemCards({ valueinfo }) {
     </>
   );
 }
+
+
+

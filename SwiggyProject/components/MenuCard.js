@@ -70,8 +70,8 @@ export default function MenuCard({ value, count, redcount }) {
                   .filter((option) => "isVeg" in option?.card?.info)
                   .map((item) => (
                     <ItemCards
-                      key={item.card.info.id}
-                      valueinfo={item.card.info}
+                      key={item?.card?.info?.id}
+                      valueinfo={item?.card?.info}
                     />
                   ))
               )
